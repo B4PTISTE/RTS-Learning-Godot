@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw6vrpa8ag755"]
+
+[ext_resource type="PackedScene" uid="uid://besmu2qdoo8y2" path="res://Unit.tscn" id="1_1rm63"]
+[ext_resource type="Texture2D" uid="uid://cn6a3kge0qvni" path="res://Assets/tile_0097.png" id="2_2o4py"]
+[ext_resource type="Script" path="res://PlayerUnit.gd" id="2_dy5w3"]
+[ext_resource type="Texture2D" uid="uid://c2rx3mww6wob" path="res://Assets/tile_0060.png" id="3_8gu77"]
+
+[node name="Player" instance=ExtResource("1_1rm63")]
+script = ExtResource("2_dy5w3")
+attack_rate = 0.8
+is_player = true
+
+[node name="SelectionVisual" type="Sprite2D" parent="." index="0"]
+visible = false
+modulate = Color(0, 1, 0, 1)
+position = Vector2(0, 5)
+texture = ExtResource("3_8gu77")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_2o4py")
+
+[node name="NavigationAgent2D" parent="." index="3"]
+path_desired_distance = 1.0
+target_desired_distance = 1.0
+path_max_distance = 10.0

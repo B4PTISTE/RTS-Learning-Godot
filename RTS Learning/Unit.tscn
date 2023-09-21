@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://besmu2qdoo8y2"]
+
+[ext_resource type="Texture2D" uid="uid://dniig2xnyyon7" path="res://Assets/tile_0096.png" id="1_13saf"]
+[ext_resource type="Script" path="res://Unit.gd" id="1_lc4gg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l0jo"]
+size = Vector2(12, 15)
+
+[node name="Unit" type="CharacterBody2D"]
+script = ExtResource("1_lc4gg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_13saf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_1l0jo")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 5.0

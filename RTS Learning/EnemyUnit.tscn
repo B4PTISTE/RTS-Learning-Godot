@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b22np3xvs3rn7"]
+
+[ext_resource type="PackedScene" uid="uid://besmu2qdoo8y2" path="res://Unit.tscn" id="1_xqr2r"]
+[ext_resource type="Script" path="res://EnemyUnit.gd" id="2_b3a36"]
+[ext_resource type="Texture2D" uid="uid://tholfkpyxqcw" path="res://Assets/tile_0112.png" id="3_8jaoc"]
+
+[node name="EnemyUnit" instance=ExtResource("1_xqr2r")]
+script = ExtResource("2_b3a36")
+detect_range = 100.0
+damage = 15
+move_speed = 35.0
+attack_rate = 0.8
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_8jaoc")
